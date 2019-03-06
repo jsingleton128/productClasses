@@ -57,6 +57,42 @@ public class Product {
 	
 	//methods
 	
+	//get + modify name
+	public String getName() {
+		return name;
+	}
+	
+	public void changeName(String newName) {
+		name = newName;
+	}
+	
+	//get + set code
+	public int getCode() {
+		return code;
+	}
+	
+	public void changeCode(int newCode) {
+		code = newCode;
+	}	
+	
+	//get + set description
+	public String getDesc() {
+		return description;
+	}
+	
+	public void changeDesc(String newDescription) {
+		description = newDescription;
+	}	
+	//get + set price
+	public double getPrice() {
+		return price;
+	}
+	
+	public void changePrice(double newPrice) {
+		price = newPrice;
+	}
+	
+	//get + modify count
 	public void addCount(int n) {//add number n to count
 		count += n;
 	}
@@ -65,11 +101,13 @@ public class Product {
 		count -= n;
 	}
 	
+	//to String
 	public String toString() {
 		String toString = name + ", " + description + ", " + "count of " + count + ".";
 		return toString;
 	}
-
+	
+	//get formatted price
 	 public String getPriceFormatted() 
 	    {
 	        String formattedPrice = NumberFormat.getCurrencyInstance().format(this.price);
